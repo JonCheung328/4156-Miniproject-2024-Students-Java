@@ -1,0 +1,4 @@
+https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+https://aws.amazon.com/what-is/unit-testing/#:~:text=A%20unit%20test%20is%20a,developer's%20theoretical%20logic%20behind%20it.
+https://www.freecodecamp.org/news/java-unit-testing/
+https://pmd.github.io/
