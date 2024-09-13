@@ -1,12 +1,12 @@
 Course.Java
-- enrollStudent function will add student and return true when capacity not reached, false when reached/exceeded capacity
-- dropStudent function will return false when count less <= 0 and true otherwise
-- GetCourseLocation will return course location rather than the instructor name
-- GetInstructorName will return the instructor name rather than the location
+- enrollStudent function should add student and return true when capacity not reached, false when reached/exceeded capacity
+- dropStudent function should return false when count less <= 0 and true otherwise
+- GetCourseLocation should return course location rather than the instructor name
+- GetInstructorName should return the instructor name rather than the location
 - Corrected the isCourseFull function logic 
 
 PMD Static Bug Finder: 
-- Added override to toString Function
+- Added override to the toString Function
 
 
 Department.Java
@@ -16,7 +16,7 @@ Department.Java
 - Function dropPersonFromMajor now decrements enrolledStudentCount only if the number of majors is larger than zero
 
 PMD Static Bug Finder: 
-- Added override to toString Function
+- Added override to the toString Function
 - Repalced HashMap with Map as it's recommended to avoid implementation types like 'HashMap'. We should use the interface instead.
 
 
@@ -28,12 +28,11 @@ PMD Static Bug Finder:
 
 
 RouteController.java
--  Function retrieveCourse when course is not found will return HttpStatus.OK rather than HttpStatus.FORBIDDEN 
--  findCourseTime function should return "The course meets at: " + requestedCourse.getCourseTimeSlot(), HttpStatus.OK; rather than "The course meets at: " + "some time", HttpStatus.OK
--  Function retrieveDepartment returns HttpStatus.OK when department was found and HttpStatus.NOT_FOUND when department is not found
--  Function retrieveCourse returns return HttpStatus.OK rather than HttpStatus.FORBIDDEN if the course is not found
--  Function getMajorCtFromDept returns departmentMapping.get(deptCode) rather than -departmentMapping.get(deptCode) when the department is found. 
-   When department is not found, return HttpStatus.NOT_FOUND rather than HttpStatus.Forbidden
+-  Function findCourseTime should return "The course meets at: " + requestedCourse.getCourseTimeSlot(), HttpStatus.OK; rather than "The course meets at: " + "some time", HttpStatus.OK
+-  Function retrieveDepartment should return HttpStatus.OK when department is found and HttpStatus.NOT_FOUND when department is not found
+-  Function retrieveCourse should return HttpStatus.OK rather than HttpStatus.FORBIDDEN when the course is found
+-  Function getMajorCtFromDept should return departmentMapping.get(deptCode) rather than -departmentMapping.get(deptCode) when the department is found. 
+   When department is not found, the function should return HttpStatus.NOT_FOUND rather than HttpStatus.Forbidden
 
 PMD Static Bug Finder: 
 -  Avoided the use of value in annotations when its the only element
