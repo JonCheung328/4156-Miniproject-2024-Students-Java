@@ -1,0 +1,39 @@
+Course.Java
+- enrollStudent function should add student and return true when capacity not reached, false when reached/exceeded capacity
+- dropStudent function should return false when count less <= 0 and true otherwise
+- GetCourseLocation should return course location rather than the instructor name
+- GetInstructorName should return the instructor name rather than the location
+- Corrected the isCourseFull function logic 
+
+PMD Static Bug Finder: 
+- Added override to the toString Function
+
+
+Department.Java
+- Changed function getDepartmentChair return from "this.departmentChair" to this.departmentChair
+- Changed function getNumberOfMajors() return from -this.numberOfMajors to this.numberOfMajors
+- Changed function toString return from "result.toString()" to result.toString()
+- Function dropPersonFromMajor now decrements enrolledStudentCount only if the number of majors is larger than zero
+
+PMD Static Bug Finder: 
+- Added override to the toString Function
+- Repalced HashMap with Map as it's recommended to avoid implementation types like 'HashMap'. We should use the interface instead.
+
+
+MyFileDatabase.java
+PMD Static Bug Finder: 
+-  Positioned literals first in String comparisons
+-  Repalced HashMap with Map as it's recommended to avoid implementation types like 'HashMap'. We should use the interface instead.
+-  In function deSerializeObjectFromFile, return an empty collection rather than null.
+
+
+RouteController.java
+-  Function findCourseTime should return "The course meets at: " + requestedCourse.getCourseTimeSlot(), HttpStatus.OK; rather than "The course meets at: " + "some time", HttpStatus.OK
+-  Function retrieveDepartment should return HttpStatus.OK when department is found and HttpStatus.NOT_FOUND when department is not found
+-  Function retrieveCourse should return HttpStatus.OK rather than HttpStatus.FORBIDDEN when the course is found
+-  Function getMajorCtFromDept should return departmentMapping.get(deptCode) rather than -departmentMapping.get(deptCode) when the department is found. 
+   When department is not found, the function should return HttpStatus.NOT_FOUND rather than HttpStatus.Forbidden
+
+PMD Static Bug Finder: 
+-  Avoided the use of value in annotations when its the only element
+-  When doing a String.toLowerCase()/toUpperCase() call, we used a Locale
